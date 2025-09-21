@@ -245,7 +245,7 @@ with col3:
             st.success("✅ Access Granted!")
             st.balloons()
             time.sleep(1)
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.session_state.is_authenticated = False
             st.error("❌ Incorrect Password")
@@ -256,7 +256,7 @@ with col3:
         if st.button("🚪 Logout"):
             st.session_state.is_authenticated = False
             st.session_state.access_password = ""
-            st.experimental_rerun()
+            st.rerun()
     
     with st.expander("💡 Password Hint"):
         st.info("Format: mental_health_YYYY")
@@ -346,11 +346,11 @@ with col2:
             st.session_state.conversation_history = []
             st.success("Chat cleared!")
             time.sleep(1)
-            st.experimental_rerun()
+            st.rerun()
     
     with col_btn2:
         if st.button("🔄 Refresh"):
-            st.experimental_rerun()
+            st.rerun()
     
     with col_btn3:
         if st.button("📊 Stats"):
